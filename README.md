@@ -8,9 +8,9 @@ How to use a native drag and drop with UI nodes
 ----------
 
 ### Demonstration (PT-BR)
-- https://www.youtube.com/watch?v=_4edpk5NGqw
+- https://www.youtube.com/watch?v=[VIDEO]
 
-[![Video](https://img.youtube.com/vi/_4edpk5NGqw/0.jpg)](https://www.youtube.com/watch?v=_4edpk5NGqw)
+[![Video](https://img.youtube.com/vi/[VIDEO]/0.jpg)](https://www.youtube.com/watch?v=[VIDEO])
 
 ----------
 

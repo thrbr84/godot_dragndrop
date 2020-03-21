@@ -74,19 +74,19 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -304.5
+margin_left = -648.0
 margin_top = -152.0
-margin_right = 304.5
+margin_right = 647.0
 margin_bottom = -88.0
-custom_constants/separation = 30
+custom_constants/separation = 40
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="slot1" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 37.0
-margin_right = 101.0
+margin_left = 355.0
+margin_right = 419.0
 group = "cor"
 showQtd = false
 increment = false
@@ -94,8 +94,8 @@ canClear = false
 color = Color( 0.835294, 0.184314, 0.184314, 1 )
 
 [node name="slot3" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 131.0
-margin_right = 195.0
+margin_left = 459.0
+margin_right = 523.0
 group = "cor"
 showQtd = false
 increment = false
@@ -103,8 +103,8 @@ canClear = false
 color = Color( 0.909804, 0.933333, 0.168627, 1 )
 
 [node name="slot4" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 225.0
-margin_right = 289.0
+margin_left = 563.0
+margin_right = 627.0
 group = "cor"
 showQtd = false
 increment = false
@@ -112,8 +112,8 @@ canClear = false
 color = Color( 0.411765, 0.835294, 0.458824, 1 )
 
 [node name="slot5" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 319.0
-margin_right = 383.0
+margin_left = 667.0
+margin_right = 731.0
 group = "cor"
 showQtd = false
 increment = false
@@ -121,8 +121,8 @@ canClear = false
 color = Color( 0.4, 0.772549, 0.835294, 1 )
 
 [node name="slot6" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 413.0
-margin_right = 477.0
+margin_left = 771.0
+margin_right = 835.0
 group = "cor"
 showQtd = false
 increment = false
@@ -130,8 +130,8 @@ canClear = false
 color = Color( 0.72549, 0.32549, 0.72549, 1 )
 
 [node name="slot2" parent="cardsColors" instance=ExtResource( 7 )]
-margin_left = 507.0
-margin_right = 571.0
+margin_left = 875.0
+margin_right = 939.0
 group = "cor"
 showQtd = false
 increment = false
@@ -162,6 +162,18 @@ __meta__ = {
 }
 
 [node name="labelImages3" type="Label" parent="."]
+margin_left = 382.7
+margin_top = 881.0
+margin_right = 484.7
+margin_bottom = 917.0
+custom_fonts/font = SubResource( 3 )
+text = "Max: 2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelImages4" type="Label" parent="."]
 margin_left = 382.7
 margin_top = 881.0
 margin_right = 484.7

@@ -2,17 +2,18 @@
 
 [ext_resource path="res://assets/icon.png" type="Texture" id=1]
 
-[sub_resource type="GDScript" id=3]
+[sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
 
 func _on_touch_pressed():
 	get_tree().change_scene(\"res://scenes/complex.tscn\")
 "
 
-[sub_resource type="GDScript" id=1]
+[sub_resource type="GDScript" id=2]
 script/source = "extends Control
 
 func get_drag_data(position):
+	
 	var preview = self.duplicate()
 	# transparência
 	preview.modulate.a = .5
@@ -20,11 +21,13 @@ func get_drag_data(position):
 	preview.get_node(\"color\").rect_position = -self.rect_size / 2
 	# esconde o fundo
 	preview.get_node(\"bkg\").hide()
+
 	set_drag_preview(preview)
+	
 	return self
 "
 
-[sub_resource type="GDScript" id=2]
+[sub_resource type="GDScript" id=3]
 script/source = "extends Control
 
 func _ready():
@@ -36,13 +39,12 @@ func can_drop_data(position, data):
 func drop_data(position, data):
 	$color.color = data.get_node(\"color\").color
 	
-	
 	data.get_node(\"color\").color = Color(randf(), randf(), randf(), 1)
 
 "
 
 [node name="simple" type="Node2D"]
-script = SubResource( 3 )
+script = SubResource( 1 )
 
 [node name="bkg2" type="ColorRect" parent="."]
 margin_right = 720.0
@@ -63,7 +65,7 @@ margin_top = 435.812
 margin_right = 488.0
 margin_bottom = 691.812
 rect_min_size = Vector2( 256, 256 )
-script = SubResource( 1 )
+script = SubResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -85,6 +87,9 @@ margin_right = 256.0
 margin_bottom = 256.0
 mouse_filter = 2
 color = Color( 0.52549, 0.0745098, 0.0745098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="destino" type="Control" parent="."]
 margin_left = 232.0
@@ -92,7 +97,7 @@ margin_top = 842.898
 margin_right = 488.0
 margin_bottom = 1098.9
 rect_min_size = Vector2( 256, 256 )
-script = SubResource( 2 )
+script = SubResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

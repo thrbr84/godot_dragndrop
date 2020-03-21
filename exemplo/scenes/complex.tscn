@@ -1,0 +1,323 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/select.png" type="Texture" id=1]
+[ext_resource path="res://assets/itens/apple.png" type="Texture" id=2]
+[ext_resource path="res://assets/itens/helm.png" type="Texture" id=3]
+[ext_resource path="res://assets/font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/itens/sword.png" type="Texture" id=5]
+[ext_resource path="res://assets/icon.png" type="Texture" id=6]
+[ext_resource path="res://scenes/slot.tscn" type="PackedScene" id=7]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Control
+
+func _on_touch_pressed():
+	get_tree().change_scene(\"res://scenes/simple.tscn\")
+"
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 25
+font_data = ExtResource( 4 )
+
+[node name="colors" type="Control"]
+margin_right = 720.0
+margin_bottom = 1280.0
+script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bkg" type="ColorRect" parent="."]
+margin_right = 720.0
+margin_bottom = 300.0
+color = Color( 0.0823529, 0.654902, 0.364706, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="touch" type="TouchScreenButton" parent="bkg"]
+position = Vector2( 253.44, 73.6 )
+scale = Vector2( 0.703563, 0.703563 )
+normal = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="labelColors" type="Label" parent="."]
+margin_top = 422.788
+margin_right = 720.0
+margin_bottom = 458.788
+custom_fonts/font = SubResource( 2 )
+text = "Color example"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelColors2" type="Label" parent="."]
+margin_top = 318.788
+margin_right = 720.0
+margin_bottom = 354.788
+custom_fonts/font = SubResource( 2 )
+text = "Tap two finger to enable unit transfer"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cardsColors" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.5
+margin_top = -152.0
+margin_right = 304.5
+margin_bottom = -88.0
+custom_constants/separation = 30
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 37.0
+margin_right = 101.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.835294, 0.184314, 0.184314, 1 )
+
+[node name="slot3" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 131.0
+margin_right = 195.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.909804, 0.933333, 0.168627, 1 )
+
+[node name="slot4" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 225.0
+margin_right = 289.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.411765, 0.835294, 0.458824, 1 )
+
+[node name="slot5" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 319.0
+margin_right = 383.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.4, 0.772549, 0.835294, 1 )
+
+[node name="slot6" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 413.0
+margin_right = 477.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.72549, 0.32549, 0.72549, 1 )
+
+[node name="slot2" parent="cardsColors" instance=ExtResource( 7 )]
+margin_left = 507.0
+margin_right = 571.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+color = Color( 0.196078, 0.180392, 0.180392, 1 )
+
+[node name="labelImages" type="Label" parent="."]
+margin_top = 630.788
+margin_right = 720.0
+margin_bottom = 666.788
+custom_fonts/font = SubResource( 2 )
+text = "Item example"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelImages2" type="Label" parent="."]
+margin_left = 236.7
+margin_top = 881.0
+margin_right = 338.7
+margin_bottom = 917.0
+custom_fonts/font = SubResource( 3 )
+text = "Max: 3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelImages3" type="Label" parent="."]
+margin_left = 382.7
+margin_top = 881.0
+margin_right = 484.7
+margin_bottom = 917.0
+custom_fonts/font = SubResource( 3 )
+text = "Max: 2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cardsImages" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.5
+margin_top = 54.0
+margin_right = 304.5
+margin_bottom = 154.0
+custom_constants/separation = 45
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="cardsImages" instance=ExtResource( 7 )]
+margin_left = 109.0
+margin_right = 209.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "helm"
+qtd = 5
+replaceNull = false
+canClear = false
+size = Vector2( 100, 100 )
+image = ExtResource( 3 )
+
+[node name="slot2" parent="cardsImages" instance=ExtResource( 7 )]
+margin_left = 254.0
+margin_right = 354.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "sword"
+showQtd = false
+increment = false
+replaceNull = false
+canClear = false
+color = Color( 0.2, 0.192157, 0.192157, 1 )
+size = Vector2( 100, 100 )
+image = ExtResource( 5 )
+
+[node name="slot3" parent="cardsImages" instance=ExtResource( 7 )]
+margin_left = 399.0
+margin_right = 499.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "apple"
+showQtd = false
+increment = false
+replaceNull = false
+canClear = false
+color = Color( 0.2, 0.192157, 0.192157, 1 )
+size = Vector2( 100, 100 )
+image = ExtResource( 2 )
+imagePreview = ExtResource( 1 )
+
+[node name="slots" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.0
+margin_top = -356.0
+margin_right = 286.0
+margin_bottom = -80.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="slots" instance=ExtResource( 7 )]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot2" parent="slots" instance=ExtResource( 7 )]
+margin_left = 148.0
+margin_right = 276.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+maxQtd = 3
+size = Vector2( 128, 128 )
+
+[node name="slot3" parent="slots" instance=ExtResource( 7 )]
+margin_left = 296.0
+margin_right = 424.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+maxQtd = 2
+size = Vector2( 128, 128 )
+
+[node name="slot4" parent="slots" instance=ExtResource( 7 )]
+margin_left = 444.0
+margin_right = 572.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+showQtd = false
+increment = false
+size = Vector2( 128, 128 )
+
+[node name="slot5" parent="slots" instance=ExtResource( 7 )]
+margin_top = 148.0
+margin_right = 128.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+size = Vector2( 128, 128 )
+
+[node name="slot6" parent="slots" instance=ExtResource( 7 )]
+margin_left = 148.0
+margin_top = 148.0
+margin_right = 276.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+size = Vector2( 128, 128 )
+
+[node name="slot7" parent="slots" instance=ExtResource( 7 )]
+margin_left = 296.0
+margin_top = 148.0
+margin_right = 424.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot8" parent="slots" instance=ExtResource( 7 )]
+margin_left = 444.0
+margin_top = 148.0
+margin_right = 572.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+[connection signal="pressed" from="bkg/touch" to="." method="_on_touch_pressed"]

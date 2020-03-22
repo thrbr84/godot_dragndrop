@@ -64,7 +64,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="unity" type="Sprite" parent="."]
+[node name="unit" type="Sprite" parent="."]
 visible = false
 modulate = Color( 0.968627, 1, 0, 1 )
 scale = Vector2( 0.4, 0.4 )

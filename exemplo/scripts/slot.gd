@@ -38,6 +38,10 @@ export(bool) var replaceNull = true
 # EN_US: Allows click to clear the slot
 export(bool) var canClear = true 
 
+# PT_BR: Permite o clique para limpar o slote
+# EN_US: Allows click to clear the slot
+export(bool) var canReceive = true 
+
 # PT_BR: Transparência do preview
 # EN_US: Preview transparency
 export(float, 0.0, 1.0) var opacityPreview = .5 
@@ -106,7 +110,10 @@ func _ready():
 	
 	# PT_BR: É necessráio colocar o mouse filter como ignore, caso o contrário o drag não vai funcionar
 	# EN_US: It is necessary to put the mouse filter as ignore, otherwise the drag will not work
-	$color.mouse_filter = MOUSE_FILTER_IGNORE
+	# Set all children as MOUSE_FILTER_IGNORE
+	for n in get_children():
+		if "mouse_filter" in n:
+			n.mouse_filter = MOUSE_FILTER_IGNORE
 
 # PT_BR: Se o usuario clicar com o botão direito do mouse, ou dois dedos na tela
 # PT_BR: Habilita / Desabilita a transferência unitária dos slotes que incrementam
@@ -192,6 +199,7 @@ func get_drag_data(position):
 # PT_BR: Essa função valida se tem algum item sendo arrastado em cima desse nó, ela deve retornar "TRUE" ou "FALSE"
 # EN_US: This function validates if there is an item being dragged over that node, it must return "TRUE" or "FALSE"
 func can_drop_data(position, data) -> bool:
+	if !canReceive: return false
 	if data == self: return false
 	var ret = false
 	

@@ -1,0 +1,202 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/itens/apple.png" type="Texture" id=1]
+[ext_resource path="res://assets/select.png" type="Texture" id=2]
+[ext_resource path="res://assets/itens/helm.png" type="Texture" id=3]
+[ext_resource path="res://assets/itens/sword.png" type="Texture" id=4]
+[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/slot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 25
+font_data = ExtResource( 7 )
+
+[node name="complex_2" type="Control"]
+margin_right = 720.0
+margin_bottom = 1280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="header" parent="." instance=ExtResource( 5 )]
+
+[node name="labelImages" type="Label" parent="."]
+margin_top = 630.788
+margin_right = 720.0
+margin_bottom = 666.788
+custom_fonts/font = SubResource( 1 )
+text = "Item example"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelInfo1" type="Label" parent="."]
+margin_left = 26.0
+margin_top = 343.0
+margin_right = 693.0
+margin_bottom = 467.0
+custom_fonts/font = SubResource( 1 )
+text = "Tap two fingers to enable unit transfer, or right mouse button"
+align = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelInfo2" type="Label" parent="."]
+margin_left = 236.7
+margin_top = 881.0
+margin_right = 338.7
+margin_bottom = 917.0
+custom_fonts/font = SubResource( 2 )
+text = "Max: 3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="labelInfo3" type="Label" parent="."]
+margin_left = 382.7
+margin_top = 881.0
+margin_right = 484.7
+margin_bottom = 917.0
+custom_fonts/font = SubResource( 2 )
+text = "Max: 2"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cardsImages" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -304.5
+margin_top = 54.0
+margin_right = 304.5
+margin_bottom = 154.0
+custom_constants/separation = 45
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="cardsImages" instance=ExtResource( 6 )]
+margin_left = 109.0
+margin_right = 209.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "helm"
+qtd = 5
+replaceNull = false
+canClear = false
+size = Vector2( 100, 100 )
+image = ExtResource( 3 )
+
+[node name="slot2" parent="cardsImages" instance=ExtResource( 6 )]
+margin_left = 254.0
+margin_right = 354.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "sword"
+qtd = 10
+replaceNull = false
+canClear = false
+size = Vector2( 100, 100 )
+image = ExtResource( 4 )
+
+[node name="slot3" parent="cardsImages" instance=ExtResource( 6 )]
+margin_left = 399.0
+margin_right = 499.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 100, 100 )
+uid = "apple"
+qtd = 30
+replaceNull = false
+canClear = false
+size = Vector2( 100, 100 )
+image = ExtResource( 1 )
+imagePreview = ExtResource( 2 )
+
+[node name="slots" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.0
+margin_top = -356.0
+margin_right = 286.0
+margin_bottom = -80.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="slots" instance=ExtResource( 6 )]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot2" parent="slots" instance=ExtResource( 6 )]
+margin_left = 148.0
+margin_right = 276.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+maxQtd = 3
+size = Vector2( 128, 128 )
+
+[node name="slot3" parent="slots" instance=ExtResource( 6 )]
+margin_left = 296.0
+margin_right = 424.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+maxQtd = 2
+size = Vector2( 128, 128 )
+
+[node name="slot4" parent="slots" instance=ExtResource( 6 )]
+margin_left = 444.0
+margin_right = 572.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot5" parent="slots" instance=ExtResource( 6 )]
+margin_top = 148.0
+margin_right = 128.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot6" parent="slots" instance=ExtResource( 6 )]
+margin_left = 148.0
+margin_top = 148.0
+margin_right = 276.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot7" parent="slots" instance=ExtResource( 6 )]
+margin_left = 296.0
+margin_top = 148.0
+margin_right = 424.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )
+
+[node name="slot8" parent="slots" instance=ExtResource( 6 )]
+margin_left = 444.0
+margin_top = 148.0
+margin_right = 572.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+size = Vector2( 128, 128 )

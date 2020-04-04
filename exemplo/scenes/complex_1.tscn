@@ -1,0 +1,210 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/header.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/slot.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 30
+font_data = ExtResource( 7 )
+
+[node name="complex_1" type="Control"]
+margin_right = 720.0
+margin_bottom = 1280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="header" parent="." instance=ExtResource( 5 )]
+
+[node name="labelColors" type="Label" parent="."]
+margin_top = 422.788
+margin_right = 720.0
+margin_bottom = 458.788
+custom_fonts/font = SubResource( 1 )
+text = "Color example"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cardsColors" type="HBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -648.0
+margin_top = -152.0
+margin_right = 647.0
+margin_bottom = -88.0
+custom_constants/separation = 40
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 355.0
+margin_right = 419.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.835294, 0.184314, 0.184314, 1 )
+
+[node name="slot3" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 459.0
+margin_right = 523.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.909804, 0.933333, 0.168627, 1 )
+
+[node name="slot4" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 563.0
+margin_right = 627.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.411765, 0.835294, 0.458824, 1 )
+
+[node name="slot5" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 667.0
+margin_right = 731.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.4, 0.772549, 0.835294, 1 )
+
+[node name="slot6" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 771.0
+margin_right = 835.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.72549, 0.32549, 0.72549, 1 )
+
+[node name="slot2" parent="cardsColors" instance=ExtResource( 6 )]
+margin_left = 875.0
+margin_right = 939.0
+group = "cor"
+showQtd = false
+increment = false
+canClear = false
+canReceive = false
+color = Color( 0.196078, 0.180392, 0.180392, 1 )
+
+[node name="slots" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -286.0
+margin_top = -356.0
+margin_right = 286.0
+margin_bottom = -80.0
+custom_constants/vseparation = 20
+custom_constants/hseparation = 20
+columns = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="slot1" parent="slots" instance=ExtResource( 6 )]
+margin_right = 128.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot2" parent="slots" instance=ExtResource( 6 )]
+margin_left = 148.0
+margin_right = 276.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot3" parent="slots" instance=ExtResource( 6 )]
+margin_left = 296.0
+margin_right = 424.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot4" parent="slots" instance=ExtResource( 6 )]
+margin_left = 444.0
+margin_right = 572.0
+margin_bottom = 128.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot5" parent="slots" instance=ExtResource( 6 )]
+margin_top = 148.0
+margin_right = 128.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot6" parent="slots" instance=ExtResource( 6 )]
+margin_left = 148.0
+margin_top = 148.0
+margin_right = 276.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot7" parent="slots" instance=ExtResource( 6 )]
+margin_left = 296.0
+margin_top = 148.0
+margin_right = 424.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot8" parent="slots" instance=ExtResource( 6 )]
+margin_left = 444.0
+margin_top = 148.0
+margin_right = 572.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+group = "cor"
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )

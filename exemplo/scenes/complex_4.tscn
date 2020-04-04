@@ -1,22 +1,18 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://assets/select.png" type="Texture" id=1]
-[ext_resource path="res://assets/itens/apple.png" type="Texture" id=2]
-[ext_resource path="res://assets/itens/helm.png" type="Texture" id=3]
-[ext_resource path="res://assets/font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=4]
-[ext_resource path="res://assets/itens/sword.png" type="Texture" id=5]
+[ext_resource path="res://assets/itens/sword.png" type="Texture" id=1]
+[ext_resource path="res://scenes/slot.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/itens/apple.png" type="Texture" id=3]
+[ext_resource path="res://assets/select.png" type="Texture" id=4]
+[ext_resource path="res://assets/font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=5]
 [ext_resource path="res://scenes/header.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/slot.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/itens/helm.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
-font_data = ExtResource( 4 )
+font_data = ExtResource( 5 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 25
-font_data = ExtResource( 4 )
-
-[node name="complex" type="Control"]
+[node name="complex_4" type="Control"]
 margin_right = 720.0
 margin_bottom = 1280.0
 __meta__ = {
@@ -47,43 +43,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="labelInfo1" type="Label" parent="."]
-margin_left = 22.0
-margin_top = 317.0
-margin_right = 692.0
-margin_bottom = 392.0
-custom_fonts/font = SubResource( 1 )
-text = "Tap two fingers to enable unit transfer, or right mouse button"
-align = 1
-autowrap = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="labelInfo2" type="Label" parent="."]
-margin_left = 236.7
-margin_top = 881.0
-margin_right = 338.7
-margin_bottom = 917.0
-custom_fonts/font = SubResource( 2 )
-text = "Max: 3"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="labelInfo3" type="Label" parent="."]
-margin_left = 382.7
-margin_top = 881.0
-margin_right = 484.7
-margin_bottom = 917.0
-custom_fonts/font = SubResource( 2 )
-text = "Max: 2"
-align = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="cardsColors" type="HBoxContainer" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -99,7 +58,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot1" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot1" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 355.0
 margin_right = 419.0
 group = "cor"
@@ -109,7 +68,7 @@ canClear = false
 canReceive = false
 color = Color( 0.835294, 0.184314, 0.184314, 1 )
 
-[node name="slot3" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot3" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 459.0
 margin_right = 523.0
 group = "cor"
@@ -119,7 +78,7 @@ canClear = false
 canReceive = false
 color = Color( 0.909804, 0.933333, 0.168627, 1 )
 
-[node name="slot4" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot4" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 563.0
 margin_right = 627.0
 group = "cor"
@@ -129,7 +88,7 @@ canClear = false
 canReceive = false
 color = Color( 0.411765, 0.835294, 0.458824, 1 )
 
-[node name="slot5" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot5" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 667.0
 margin_right = 731.0
 group = "cor"
@@ -139,7 +98,7 @@ canClear = false
 canReceive = false
 color = Color( 0.4, 0.772549, 0.835294, 1 )
 
-[node name="slot6" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot6" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 771.0
 margin_right = 835.0
 group = "cor"
@@ -149,7 +108,7 @@ canClear = false
 canReceive = false
 color = Color( 0.72549, 0.32549, 0.72549, 1 )
 
-[node name="slot2" parent="cardsColors" instance=ExtResource( 7 )]
+[node name="slot2" parent="cardsColors" instance=ExtResource( 2 )]
 margin_left = 875.0
 margin_right = 939.0
 group = "cor"
@@ -174,19 +133,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot1" parent="cardsImages" instance=ExtResource( 7 )]
+[node name="slot1" parent="cardsImages" instance=ExtResource( 2 )]
 margin_left = 109.0
 margin_right = 209.0
 margin_bottom = 100.0
 rect_min_size = Vector2( 100, 100 )
 uid = "helm"
-qtd = 5
+showQtd = false
+increment = false
 replaceNull = false
 canClear = false
+canReceive = false
+color = Color( 0.2, 0.192157, 0.192157, 1 )
 size = Vector2( 100, 100 )
-image = ExtResource( 3 )
+image = ExtResource( 7 )
 
-[node name="slot2" parent="cardsImages" instance=ExtResource( 7 )]
+[node name="slot2" parent="cardsImages" instance=ExtResource( 2 )]
 margin_left = 254.0
 margin_right = 354.0
 margin_bottom = 100.0
@@ -199,9 +161,9 @@ canClear = false
 canReceive = false
 color = Color( 0.2, 0.192157, 0.192157, 1 )
 size = Vector2( 100, 100 )
-image = ExtResource( 5 )
+image = ExtResource( 1 )
 
-[node name="slot3" parent="cardsImages" instance=ExtResource( 7 )]
+[node name="slot3" parent="cardsImages" instance=ExtResource( 2 )]
 margin_left = 399.0
 margin_right = 499.0
 margin_bottom = 100.0
@@ -214,8 +176,8 @@ canClear = false
 canReceive = false
 color = Color( 0.2, 0.192157, 0.192157, 1 )
 size = Vector2( 100, 100 )
-image = ExtResource( 2 )
-imagePreview = ExtResource( 1 )
+image = ExtResource( 3 )
+imagePreview = ExtResource( 4 )
 
 [node name="slots" type="GridContainer" parent="."]
 anchor_left = 0.5
@@ -233,72 +195,78 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="slot1" parent="slots" instance=ExtResource( 7 )]
+[node name="slot1" parent="slots" instance=ExtResource( 2 )]
 margin_right = 128.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
+showQtd = false
+increment = false
+replaceNull = false
 size = Vector2( 128, 128 )
 
-[node name="slot2" parent="slots" instance=ExtResource( 7 )]
+[node name="slot2" parent="slots" instance=ExtResource( 2 )]
 margin_left = 148.0
 margin_right = 276.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
-maxQtd = 3
+showQtd = false
+increment = false
+replaceNull = false
 size = Vector2( 128, 128 )
 
-[node name="slot3" parent="slots" instance=ExtResource( 7 )]
+[node name="slot3" parent="slots" instance=ExtResource( 2 )]
 margin_left = 296.0
 margin_right = 424.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
-group = "cor"
-maxQtd = 2
+showQtd = false
+increment = false
+replaceNull = false
 size = Vector2( 128, 128 )
 
-[node name="slot4" parent="slots" instance=ExtResource( 7 )]
+[node name="slot4" parent="slots" instance=ExtResource( 2 )]
 margin_left = 444.0
 margin_right = 572.0
 margin_bottom = 128.0
 rect_min_size = Vector2( 128, 128 )
 showQtd = false
 increment = false
+replaceNull = false
 size = Vector2( 128, 128 )
 
-[node name="slot5" parent="slots" instance=ExtResource( 7 )]
+[node name="slot5" parent="slots" instance=ExtResource( 2 )]
 margin_top = 148.0
 margin_right = 128.0
 margin_bottom = 276.0
 rect_min_size = Vector2( 128, 128 )
-group = "cor"
-showQtd = false
-increment = false
-size = Vector2( 128, 128 )
-
-[node name="slot6" parent="slots" instance=ExtResource( 7 )]
-margin_left = 148.0
-margin_top = 148.0
-margin_right = 276.0
-margin_bottom = 276.0
-rect_min_size = Vector2( 128, 128 )
-group = "cor"
-showQtd = false
-increment = false
-size = Vector2( 128, 128 )
-
-[node name="slot7" parent="slots" instance=ExtResource( 7 )]
-margin_left = 296.0
-margin_top = 148.0
-margin_right = 424.0
-margin_bottom = 276.0
-rect_min_size = Vector2( 128, 128 )
-group = "cor"
 showQtd = false
 increment = false
 replaceNull = false
 size = Vector2( 128, 128 )
 
-[node name="slot8" parent="slots" instance=ExtResource( 7 )]
+[node name="slot6" parent="slots" instance=ExtResource( 2 )]
+margin_left = 148.0
+margin_top = 148.0
+margin_right = 276.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot7" parent="slots" instance=ExtResource( 2 )]
+margin_left = 296.0
+margin_top = 148.0
+margin_right = 424.0
+margin_bottom = 276.0
+rect_min_size = Vector2( 128, 128 )
+showQtd = false
+increment = false
+replaceNull = false
+size = Vector2( 128, 128 )
+
+[node name="slot8" parent="slots" instance=ExtResource( 2 )]
 margin_left = 444.0
 margin_top = 148.0
 margin_right = 572.0
